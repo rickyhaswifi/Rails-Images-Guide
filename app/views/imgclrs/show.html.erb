@@ -10,73 +10,99 @@
 <img class="full" src="<%= @imgclr.imagelink %>">
 
 <h1>Full Image</h1>
-<code>
-        .full{
-            width: 100%;
-        }   
-</code>
+<pre>
+    <code>
+            .full{
+                width: 100%;
+            }   
+    </code>
+</pre>
 
 <hr>
 
 <div class="circle" style="background-image: url(<%= @imgclr.imagelink%>);"> </div>
 
 <h1>Circle</h1>
-<code>
-        .circle {<br>
-            width: 300px;<br>
-            height: 300px;<br>
-            background-repeat: no-repeat; background-position: center;  background-size: cover;<br>
-            border-radius: 50%;<br>
-            box-shadow: 0px 0px 8px 1px #000;<br>
-        }
-</code>
+<pre>
+    <code>
+    
+            div class="circle" style="background-image: url();"> div<br>
+            %= @imgclr.imagelink%<br>
+            <hr>
+            <br>
+            .circle {<br>
+                width: 300px;<br>
+                height: 300px;<br>
+                background-repeat: no-repeat; background-position: center;  background-size: cover;<br>
+                border-radius: 50%;<br>
+                box-shadow: 0px 0px 8px 1px #000;<br>
+            }
+    </code>
+</pre>
 <hr>
 
 <div class="square" style="background-image: url(<%= @imgclr.imagelink%>);"> </div>
 
 <h1>Square</h1>
-<code>
-        .square{<br>
-            background-repeat: no-repeat; background-position: center;  background-size: cover;<br>
-            height: 500px;<br>
-            width: 500px;<br>
-        }<br>
-</code>
+<pre>
+    <code>
+
+            div class="square" style="background-image: url();"> div<br>
+            %= @imgclr.imagelink%<br>
+            <hr>
+            <br>
+            .square{<br>
+                background-repeat: no-repeat; background-position: center;  background-size: cover;<br>
+                height: 500px;<br>
+                width: 500px;<br>
+            }<br>
+    </code>
+</pre>
 <hr>
 
 <div class="roundCorner" style="background-image: url(<%= @imgclr.imagelink%>);"> </div>
 
 <h1>Round Corner</h1>
-<code>
-        .roundCorner{<br>
-            border-style: solid;<br>
-            border-width: 1px #ccc;<br>
-            width: 300px;<br>
-            height: 300px;<br>
-            background-repeat: no-repeat; background-position: center;  background-size: cover;<br>
-            border-radius: 10px;<br>
-       }<br>
-</code>
+<pre>
+    <code>
+            div class="roundCorner" style="background-image: url();"> div<br>
+            %= @imgclr.imagelink%<br>
+            <hr>
+            <br>
+            .roundCorner{<br>
+                border-style: solid;<br>
+                border-width: 1px #ccc;<br>
+                width: 300px;<br>
+                height: 300px;<br>
+                background-repeat: no-repeat; background-position: center;  background-size: cover;<br>
+                border-radius: 10px;<br>
+           }<br>
+    </code>
+</pre>
 
 <hr>
 
 <h1>Passing in color hex code</h1>
 <h1 style="color: #<%= @imgclr.colorhex %>">  Change Color </h1> 
-<code>
-        style="color: #<%= @imgclr.colorhex %>"<br>
-        %= @imgclr.colorhex%
-</code>
+<pre>
+    <code>
+            style="color: #<%= @imgclr.colorhex %>"<br>
+            %= @imgclr.colorhex%
+    </code>
+</pre>
 
 <div class="grad" style="background: linear-gradient(45deg, #<%= @imgclr.colorhex %>, #9198e5);"></div>
-<code>
-    /* Set DIV Shape */<br>
-        .grad {<br>
-            width: 300px;<br>
-            height: 300px;<br>
-        }<br>
-<br>
-    class="grad" style="background: linear-gradient(45deg, #<%= @imgclr.colorhex %>, #9198e5);"
-</code>
+<pre>
+    <code>
+        /* Set DIV Shape */<br>
+            .grad {<br>
+                width: 300px;<br>
+                height: 300px;<br>
+            }<br>
+    <br>
+        class="grad" style="background: linear-gradient(45deg, #<%= @imgclr.colorhex %>, #9198e5);"
+    </code>
+</pre>
 <hr>
 <%= link_to 'Back', root_path %> |
 <%= link_to 'Update Image Details', edit_imgclr_path %> |
@@ -115,6 +141,18 @@
      height: 300px;
      background-repeat: no-repeat; background-position: center;  background-size: cover;
      border-radius: 10px;
+}
+
+pre{
+  font-family: Consolas, Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New, monospace, serif;
+  margin-bottom: 10px;
+  overflow: auto;
+  width: auto;
+  padding: 5px;
+  background-color: #eee;
+  width: 650px!ie7;
+  padding-bottom: 20px!ie7;
+  max-height: 600px;
 }
 
 </style>
