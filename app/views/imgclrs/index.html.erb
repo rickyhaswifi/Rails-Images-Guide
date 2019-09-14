@@ -1,0 +1,10 @@
+<h1>Imgclrs#index</h1>
+<p>Find me in app/views/imgclrs/index.html.erb</p>
+
+<%= link_to 'Add Image', new_imgclr_path %>
+
+
+<% @imgclrs.each do |imgclr| %>
+    <h2> <%= link_to imgclr.id, imgclr %></h2>
+    </div>
+<% end %>

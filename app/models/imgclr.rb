@@ -1,0 +1,2 @@
+class Imgclr < ApplicationRecord
+end

@@ -1,0 +1,120 @@
+<h1>Imgclrs#show</h1>
+<p>Find me in app/views/imgclrs/show.html.erb</p>
+
+<%= @imgclr.imagelink %>
+
+<h1>String</h1>
+
+<hr>
+
+<img class="full" src="<%= @imgclr.imagelink %>">
+
+<h1>Full Image</h1>
+<code>
+        .full{
+            width: 100%;
+        }   
+</code>
+
+<hr>
+
+<div class="circle" style="background-image: url(<%= @imgclr.imagelink%>);"> </div>
+
+<h1>Circle</h1>
+<code>
+        .circle {<br>
+            width: 300px;<br>
+            height: 300px;<br>
+            background-repeat: no-repeat; background-position: center;  background-size: cover;<br>
+            border-radius: 50%;<br>
+            box-shadow: 0px 0px 8px 1px #000;<br>
+        }
+</code>
+<hr>
+
+<div class="square" style="background-image: url(<%= @imgclr.imagelink%>);"> </div>
+
+<h1>Square</h1>
+<code>
+        .square{<br>
+            background-repeat: no-repeat; background-position: center;  background-size: cover;<br>
+            height: 500px;<br>
+            width: 500px;<br>
+        }<br>
+</code>
+<hr>
+
+<div class="roundCorner" style="background-image: url(<%= @imgclr.imagelink%>);"> </div>
+
+<h1>Round Corner</h1>
+<code>
+        .roundCorner{<br>
+            border-style: solid;<br>
+            border-width: 1px #ccc;<br>
+            width: 300px;<br>
+            height: 300px;<br>
+            background-repeat: no-repeat; background-position: center;  background-size: cover;<br>
+            border-radius: 10px;<br>
+       }<br>
+</code>
+
+<hr>
+
+<h1>Passing in color hex code</h1>
+<h1 style="color: #<%= @imgclr.colorhex %>">  Change Color </h1> 
+<code>
+        style="color: #<%= @imgclr.colorhex %>"<br>
+        %= @imgclr.colorhex%
+</code>
+
+<div class="grad" style="background: linear-gradient(45deg, #<%= @imgclr.colorhex %>, #9198e5);"></div>
+<code>
+    /* Set DIV Shape */<br>
+        .grad {<br>
+            width: 300px;<br>
+            height: 300px;<br>
+        }<br>
+<br>
+    class="grad" style="background: linear-gradient(45deg, #<%= @imgclr.colorhex %>, #9198e5);"
+</code>
+<hr>
+<%= link_to 'Back', root_path %> |
+<%= link_to 'Update Image Details', edit_imgclr_path %> |
+<%= link_to 'Delete', @imgclr, method: :delete %>
+
+<style>
+
+.full{
+    width: 100%;
+}    
+
+.grad {
+    width: 300px;
+    height: 300px;
+}
+
+
+.circle {
+    width: 300px;
+    height: 300px;
+    background-repeat: no-repeat; background-position: center;  background-size: cover;
+    border-radius: 50%;
+    box-shadow: 0px 0px 8px 1px #000;
+}
+
+.square{
+    background-repeat: no-repeat; background-position: center;  background-size: cover;
+    height: 500px;
+    width: 500px;
+}
+
+.roundCorner{
+     border-style: solid;
+     border-width: 1px #ccc;
+     width: 300px;
+     height: 300px;
+     background-repeat: no-repeat; background-position: center;  background-size: cover;
+     border-radius: 10px;
+}
+
+</style>
